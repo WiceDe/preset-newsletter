@@ -219,30 +219,32 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
     `,
   });
 
-  const listItem =
-    `<table class="list-item">
-      <tr>
-        <td class="list-item-cell">
-          <table class="list-item-content">
-            <tr class="list-item-row">
-              <td class="list-cell-left">
-                <img class="list-item-image" src="https://via.placeholder.com/150/78c5d6/fff" alt="Image"/>
-              </td>
-              <td class="list-cell-right">
-                <h1 class="card-title">Title here</h1>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>`;
-
   addBlock('list-items', {
     label: 'List Items',
     media: `<svg viewBox="0 0 24 24">
       <path fill="currentColor" d="M2 14H8V20H2M16 8H10V10H16M2 10H8V4H2M10 4V6H22V4M10 20H16V18H10M10 16H22V14H10"/>
     </svg>`,
-    content: listItem + listItem,
+    content: `
+      <table style="width: 100%;">
+        <tr>
+          <td style="vertical-align: top; padding: 5px 0;">
+            <span style="margin-right: 8px; font-size: 16px;">•</span>
+            Erster Listenpunkt
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top; padding: 5px 0;">
+            <span style="margin-right: 8px; font-size: 16px;">•</span>
+            Zweiter Listenpunkt
+          </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: top; padding: 5px 0;">
+            <span style="margin-right: 8px; font-size: 16px;">•</span>
+            Dritter Listenpunkt
+          </td>
+        </tr>
+      </table>
+    `,
   });
 };
