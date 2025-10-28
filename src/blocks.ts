@@ -224,27 +224,50 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
     media: `<svg viewBox="0 0 24 24">
       <path fill="currentColor" d="M2 14H8V20H2M16 8H10V10H16M2 10H8V4H2M10 4V6H22V4M10 20H16V18H10M10 16H22V14H10"/>
     </svg>`,
-    content: `
-      <table style="width: 100%;">
-        <tr>
-          <td style="vertical-align: top; padding: 5px 0;">
-            <span style="margin-right: 8px; font-size: 16px;">•</span>
-            Erster Listenpunkt
-          </td>
-        </tr>
-        <tr>
-          <td style="vertical-align: top; padding: 5px 0;">
-            <span style="margin-right: 8px; font-size: 16px;">•</span>
-            Zweiter Listenpunkt
-          </td>
-        </tr>
-        <tr>
-          <td style="vertical-align: top; padding: 5px 0;">
-            <span style="margin-right: 8px; font-size: 16px;">•</span>
-            Dritter Listenpunkt
-          </td>
-        </tr>
-      </table>
-    `,
+    content: {
+      tagName: 'table',
+      attributes: { style: 'width: 100%;' },
+      components: [
+        {
+          tagName: 'tr',
+          components: [
+            {
+              tagName: 'td',
+              attributes: { style: 'vertical-align: top; padding: 5px 0;' },
+              components: [
+                { tagName: 'span', content: '•', attributes: { style: 'margin-right: 8px; font-size: 16px;' }, editable: false },
+                { type: 'text', content: 'Erster Listenpunkt' },
+              ],
+            },
+          ],
+        },
+        {
+          tagName: 'tr',
+          components: [
+            {
+              tagName: 'td',
+              attributes: { style: 'vertical-align: top; padding: 5px 0;' },
+              components: [
+                { tagName: 'span', content: '•', attributes: { style: 'margin-right: 8px; font-size: 16px;' }, editable: false },
+                { type: 'text', content: 'Zweiter Listenpunkt' },
+              ],
+            },
+          ],
+        },
+        {
+          tagName: 'tr',
+          components: [
+            {
+              tagName: 'td',
+              attributes: { style: 'vertical-align: top; padding: 5px 0;' },
+              components: [
+                { tagName: 'span', content: '•', attributes: { style: 'margin-right: 8px; font-size: 16px;' }, editable: false },
+                { type: 'text', content: 'Dritter Listenpunkt' },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   });
 };
