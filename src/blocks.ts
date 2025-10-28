@@ -235,8 +235,8 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
               tagName: 'td',
               attributes: { style: 'vertical-align: top; padding: 5px 0;' },
               components: [
-                { tagName: 'span', content: '•', attributes: { style: 'margin-right: 8px; font-size: 16px;' }, editable: false },
-                { type: 'text', content: 'Erster Listenpunkt' },
+                { tagName: 'span', content: '•', attributes: { style: 'margin-right: 8px; font-size: 16px; display: inline;' }, editable: false },
+                { type: 'text', content: 'Erster Listenpunkt', style: { display: 'inline' } },
               ],
             },
           ],
@@ -248,8 +248,8 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
               tagName: 'td',
               attributes: { style: 'vertical-align: top; padding: 5px 0;' },
               components: [
-                { tagName: 'span', content: '•', attributes: { style: 'margin-right: 8px; font-size: 16px;' }, editable: false },
-                { type: 'text', content: 'Zweiter Listenpunkt' },
+                { tagName: 'span', content: '•', attributes: { style: 'margin-right: 8px; font-size: 16px; display: inline;' }, editable: false },
+                { type: 'text', content: 'Zweiter Listenpunkt', style: { display: 'inline' } },
               ],
             },
           ],
@@ -261,8 +261,8 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
               tagName: 'td',
               attributes: { style: 'vertical-align: top; padding: 5px 0;' },
               components: [
-                { tagName: 'span', content: '•', attributes: { style: 'margin-right: 8px; font-size: 16px;' }, editable: false },
-                { type: 'text', content: 'Dritter Listenpunkt' },
+                { tagName: 'span', content: '•', attributes: { style: 'margin-right: 8px; font-size: 16px; display: inline;' }, editable: false },
+                { type: 'text', content: 'Dritter Listenpunkt', style: { display: 'inline' } },
               ],
             },
           ],
